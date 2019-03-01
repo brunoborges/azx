@@ -13,18 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: AZX | Azure Scripting Made Easier
-email: robcon@microsoft.com
+title: JAVA_HOME | Jave Learning Made Easy
+email: bruno.borges@gmail.com
 
 description: >- # this means to ignore newlines until "baseurl:"
-  AZX is a utility that helps you quickly create scripts for Microsoft
-  Azure. You can use the command line or browse this website. From your
-  CDA friends at Microsoft.
+  JAVA_HOME is a website with curated information to help developers learn Java 
+  the easy way.
   
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: azureadvocates
-github_username:  azureadvocates
+url: "https://javahome.dev" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: javahomedev
+github_username:  brunoborges
 
 # Build settings
 markdown: kramdown
@@ -32,13 +31,14 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+collections_dir: articles
 collections:
-  api:
+  jdks:
     output: true
-  recipes:
+    permalink: "/:collection/:name"
+  editors:
     output: true
-  authors:
-    output: true
+    permalink: "/:collection/:name"
     
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

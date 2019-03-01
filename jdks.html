@@ -1,0 +1,32 @@
+---
+title: JAVA_HOME -> JDKs
+layout: default
+---
+{% assign articles = site.jdks %}
+
+<div class="wrapper">
+  <section class="section section-lg">
+    <section class="section">
+      <img src="/assets/img/path4.png" class="path">
+      <div class="container" id="app">
+        <!-- Section -->
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center p-25">Java Development Kits</h2>
+            <p>The JDK is the most important tool required to compile and run Java code.</p>
+            <p>Below you will find a list of vendors who offer JDKs.</p>
+            {% for article in articles %}
+            <ul class="list-group list-group-flush" >
+              <li class="list-group-item" style="background-color:transparent;border:0;border-bottom:1px solid #178CD4">
+                  <a href="/jdks/{{article.slug}}" ><h4 class="mb-1">{{ article.title }}</h4></a>
+                  <p class="mb-1 small">{{ article.description }}</p>
+              </li>
+            </ul>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- End Section -->
+      </div>
+    </section>
+  </section>
+</div>

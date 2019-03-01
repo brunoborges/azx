@@ -1,0 +1,32 @@
+---
+title: JAVA_HOME -> JDKs
+layout: default
+---
+{% assign articles = site.editors %}
+
+<div class="wrapper">
+  <section class="section section-lg">
+    <section class="section">
+      <img src="/assets/img/path4.png" class="path">
+      <div class="container" id="app">
+        <!-- Section -->
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center p-25">Java Editors</h2>
+            <p>A text editor is a good start for developing Java, while an IDE can give you a complete, integrated development environment.</p>
+            <p>Below you will find a list of most adopted IDEs and editors.</p>
+            {% for article in articles %}
+            <ul class="list-group list-group-flush" >
+              <li class="list-group-item" style="background-color:transparent;border:0;border-bottom:1px solid #178CD4">
+                  <a href="/editors/{{article.slug}}" ><h4 class="mb-1">{{ article.title }}</h4></a>
+                  <p class="mb-1 small">{{ article.description }}</p>
+              </li>
+            </ul>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- End Section -->
+      </div>
+    </section>
+  </section>
+</div>
